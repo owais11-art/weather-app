@@ -1,0 +1,12 @@
+- Weather App
+    - decide background color for app. @done
+    - get icon for each weather condition. @done
+    - create search-bar component. @done
+    - add functionality @done
+    - create component for showing current weather data. @done
+    - create component for today's forecast. @done
+    - create component for extra info about current data. @done
+    - create component for seven days forecast. @done
+    - make responsive. @done
+    - add loader. @done
+    - refactor logic code. @done
