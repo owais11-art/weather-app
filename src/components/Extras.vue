@@ -1,4 +1,8 @@
 <script setup>
+    import temp from '../assets/temp.svg'
+    import humidity from '../assets/humidity.svg'
+    import wind from '../assets/wind.svg'
+    import uvindex from '../assets/uvindex.svg'
     defineProps(['extras'])
 </script>
 
@@ -6,28 +10,28 @@
     <div class="extras">
                 <div class="extra">
                     <div class="head">
-                        <img src="src/assets/temp.svg" alt="real-feel">
+                        <img :src="temp" alt="real-feel">
                         <h5>Real Feel</h5>
                     </div>
                     <p>{{ extras.realFeel }}&deg;</p>
                 </div>
                 <div class="extra">
                     <div class="head">
-                        <img src="src/assets/humidity.svg" alt="humidity">
+                        <img :src="humidity" alt="humidity">
                         <h5>Humidity</h5>
                     </div>
                     <p>{{ extras.humidity }}</p>
                 </div>
                 <div class="extra">
                     <div class="head">
-                        <img src="src/assets/wind.svg" alt="wind">
+                        <img :src="wind" alt="wind">
                         <h5>Wind</h5>
                     </div>
                     <p>{{ extras.wind }}KM/h</p>
                 </div>
                 <div class="extra">
                     <div class="head">
-                        <img src="src/assets/uvindex.svg" alt="uv-index">
+                        <img :src="uvindex" alt="uv-index">
                         <h5>UVIndex</h5>
                     </div>
                     <p>{{ extras.uvindex }}</p>
