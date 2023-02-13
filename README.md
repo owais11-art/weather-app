@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+# Weather App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A weather app created using vue.js, Visual Crossing Weather API and HERE map API.
 
-## Recommended IDE Setup
+# How to Run
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- install vite.
+- Clone this repository (git clone https://github.com/owais11-art/weather-app.git).
+- npm install (To install all the dependencies)
+- npm run dev (To start development server at http://localhost:5173/)
+
+# Functionality
+
+- Users can check weather by searching place name or by selecting a place on map.
+- Users can also check current day's forecast and a week's forecast.
