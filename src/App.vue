@@ -4,11 +4,20 @@
   import TodaysForecast from './components/TodaysForecast.vue'
   import WeeksForecast from './components/WeeksForecast.vue'
   import Loader from './components/Loader.vue'
+  import MapModal from './components/MapModal.vue'
   import { useWeatherData } from './composables/weatherData'
   import { ref } from 'vue';
   const address = ref('srinagar')
+  const displayMap = ref(false)
   const { finalReport } = useWeatherData(address)
   const searchWeatherData = place => address.value = place
+  const setDisplayMap = () => {
+    displayMap.value = !displayMap.value
+  }
+  const handleSearchLocation = name => {
+    address.value = name
+    displayMap.value = false
+  }
 </script>
 
 <template>
@@ -16,10 +25,17 @@
     <div class="current-forecast">
       <SearchBar
         @search-weather-data="searchWeatherData"
+        @setDisplayMap="setDisplayMap"
       />
       <template v-if="finalReport">
+        <MapModal 
+          :address="address"
+          v-if="displayMap"
+          @search-location="handleSearchLocation"
+        />
         <CurrentWeather
           :report="finalReport"
+          v-else
         />
         <TodaysForecast
           :forecast="finalReport.todaysForecast"

@@ -1,11 +1,12 @@
 import { ref } from "vue"
+
+const fetchData = async (url, data) => {
+    const response = await fetch(url)
+    data.value = await response.json()
+}
+
 export const useFetch = (url) => {
-    console.log(url)
     const data = ref(null)
-    const fetchData = async url => {
-        const response = await fetch(url)
-        data.value = await response.json()
-    }
-    fetchData(url)
+    fetchData(url, data)
     return { data }
 }

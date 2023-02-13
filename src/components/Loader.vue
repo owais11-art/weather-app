@@ -18,7 +18,6 @@
         height: 100vh;
         display: grid;
         place-items: center;
-        color: white;
         background-color: rgba(11, 187, 169, 0.7);
         .loader{
             width: 80px;

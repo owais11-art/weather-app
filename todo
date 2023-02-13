@@ -1,4 +1,4 @@
-- Weather App
+- Weather App @done
     - decide background color for app. @done
     - get icon for each weather condition. @done
     - create search-bar component. @done
@@ -10,3 +10,4 @@
     - make responsive. @done
     - add loader. @done
     - refactor logic code. @done
+    - add map functionality. @done

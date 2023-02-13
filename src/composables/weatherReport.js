@@ -8,7 +8,8 @@ const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY
 export const getWeatherReport = data => {
     const values = ref(null)
     const [ {lat, lon, name} ] = data.value
-    const weatherURL = `${WEATHER_BASE_URL}${lat},${lon}?unitGroup=metric&include=hours%2Ccurrent&key=${WEATHER_API_KEY}`
+    const query = 'unitGroup=metric&include=hours%2Ccurrent'
+    const weatherURL = `${WEATHER_BASE_URL}${lat},${lon}?${query}&key=${WEATHER_API_KEY}`
     const { data: weatherReport } = useFetch(weatherURL)
     watch(weatherReport, () => {
         const {current, todaysForecast, sevenDaysForecast, extras} = dataCleanUp(weatherReport)
